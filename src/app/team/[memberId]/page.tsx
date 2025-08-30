@@ -1,5 +1,11 @@
 import { notFound } from "next/navigation";
 
+
+export const metadata = {
+    title:"Member Details Page",
+    description:"Basic Member Details "
+}
+
 export default async function Home({ params }:{
     params : Promise < { memberId :string } >
 })
