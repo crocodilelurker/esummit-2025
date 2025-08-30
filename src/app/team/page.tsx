@@ -5,5 +5,5 @@ export const metadata = {
 
 export default function Home()
 {
-    return <div> Hello Sponsors</div>
+    return <div> Hello Team Members</div>
 }

@@ -1,5 +1,6 @@
 import Navbar from "./_components/Navbar"
 import Footer from "./_components/Footer"
+import "../app/globals.css"
 export const metadata = {
   title: 'E-Summit 2025',
   description: 'MetaData Configured',
