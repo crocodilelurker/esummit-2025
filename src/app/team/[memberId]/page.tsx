@@ -1,14 +1,18 @@
 import { notFound } from "next/navigation";
-
-
-export const metadata = {
-    title:"Member Details Page",
-    description:"Basic Member Details "
+import { Metadata } from "next";
+type Props = {
+    params: Promise< { memberId :string } >;
 }
 
-export default async function Home({ params }:{
-    params : Promise < { memberId :string } >
-})
+export const generateMetadata =async ({params}:Props) :Promise<Metadata> => {
+    const id= (await params).memberId;
+    return {
+        title:`Member ${id}`,
+        description:"Core Member Each details"
+    }
+}
+
+export default async function Home({ params }:Props)
 {
     const memberId = (await params).memberId;
     //we will validate the Member Id via the response 
